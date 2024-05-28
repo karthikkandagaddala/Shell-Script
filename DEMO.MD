@@ -6,6 +6,6 @@
 4.git add DEMO.MD #it is adding in temporary area
 5.git commit -m "it is for learning steps github" #it is in local repo in our laptop only
 6.git push -u origin main #it will push into github
-7.git pull #with http address in ssh session
+7.git clone #with http address in ssh session
 8.in ssh session we need to start sh 01 Helloworld.sh
 9.Done
