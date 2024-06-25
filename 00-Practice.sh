@@ -1,7 +1,7 @@
-#!/bin/bash/
-person1=$1
-person2=$2
-echo "$person1:hi $person2"
-echo "$person2:Hi $person1 I am fine how are you $person1"
-echo "$person1:$person2 how happed your intrivew"
-echo "$person2:yaa $person1 it was happed very smooth."
+#!/bin/bash
+input1=$1
+input2=$2
+echo "$input1::were are you"
+echo "$input2::I am infront of you"
+echo "$input1::sorry i couldnt recgnize"
+echo "$input2::No problem buddy"
