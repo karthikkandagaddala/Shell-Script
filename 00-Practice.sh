@@ -1,6 +1,5 @@
 #!/bin/bash
-echo "please enter your USERID:"
-read -s USERID
-echo "please enter your PASSWORD:"
-read -s PASSWORD
-echo "USERID is:$USERID & PASSWORD is:$PASSWORD"
+Movies=("RRR" "DJTillu" "sega")
+echo "First movie is::{$Movies[0]}"
+echo "Second movie is::{$Movies[1]}"
+echo "All Movies are::{$Movies[@]}"
