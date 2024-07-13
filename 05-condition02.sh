@@ -5,7 +5,7 @@ then
     echo "Please proceed with sudo access"
     exit 1
 else
-    echo  "your am super user"
+    echo "your a super user"
 fi
 dnf install mysql -y
 if [ $? -ne 0]
