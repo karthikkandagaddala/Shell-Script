@@ -8,4 +8,4 @@ echo "Which user is running this script:$user"
 echo "process ID of the current shell script:$$"
 echo "process ID of last background command:$!"
 echo "Previous status exit status:$?"
-echo "To know who present user:$id -u" #we have to know previous
+echo "To know who present user:$(id -u)" #we have to know previous
