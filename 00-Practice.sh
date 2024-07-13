@@ -6,3 +6,4 @@ then
 else
     echo "Your super user"
 fi
+dnf install mysql -y
