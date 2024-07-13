@@ -9,7 +9,7 @@ else
     echo "your a super user"
 fi
 valid(){
-    fi [ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
         echo "$2....FAILURE"
         exit 1
