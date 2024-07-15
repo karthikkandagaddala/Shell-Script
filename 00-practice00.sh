@@ -8,7 +8,7 @@ then
 else
     echo "Your a root user"
 fi
-function(){
+fun(){
   if [ $1 -ne 0 ]
   then
       echo "$2....Failure"
@@ -18,6 +18,6 @@ function(){
   fi
 }
 dnf install mysql -y
-function $? "Installing MYSQL"
+fun $? "Installing MYSQL"
 dnf install Docker -y
-function $? "Instaling Docker"
+fun $? "Instaling Docker"
