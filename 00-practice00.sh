@@ -1,7 +1,23 @@
-Number=$1
-if [ $Number -gt 10 ] 
+#!/bin/bash
+userid=$(id -u)
+timestamp=$(date +%F-%H-%M-%S)
+if [ userid -ne 0 ]
 then
-  echo "$Number is greather than 10"
+    echo "please proceed with Root Acess"
+    exit 1
 else
-  echo "$Number is lesser than 10"
+    echo "Your a root user"
 fi
+function(){
+if [ $? -ne 0]
+then
+    echo "$2....Failure"
+    exit 1
+else
+    echo "$2....Completed"
+fi
+}
+function $1 "Installing MYSQL"
+dnf install mysql -y
+function $1 "Instaling Docker"
+dnf install Docker -y
