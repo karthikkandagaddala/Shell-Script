@@ -9,7 +9,7 @@ else
     echo "Your a root user"
 fi
 function(){
- if [ $? -ne 0]
+ if [ $? -ne 0 ]
  then
      echo "$2....Failure"
      exit 1
