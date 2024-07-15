@@ -8,7 +8,7 @@ then
 else
     echo "Your a root user"
 fi
-function(){
+function (){
 if [ $? -ne 0]
 then
     echo "$2....Failure"
