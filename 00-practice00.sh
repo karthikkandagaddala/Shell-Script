@@ -9,13 +9,13 @@ else
     echo "Your a root user"
 fi
 function(){
-  if [ $? -ne 0]
-  then
-      echo "$2....Failure"
-      exit 1
-  else
-      echo "$2....Completed"
-  fi
+ if [ $? -ne 0]
+ then
+    echo "$2....Failure"
+    exit 1
+ else
+    echo "$2....Completed"
+ fi
 }
 dnf install mysql -y
 function $1 "Installing MYSQL"
