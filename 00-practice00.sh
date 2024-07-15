@@ -1,7 +1,7 @@
 #!/bin/bash
 userid=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
-if [ userid -ne 0 ]
+if [ $userid -ne 0 ]
 then
     echo "please proceed with Root Acess"
     exit 1
