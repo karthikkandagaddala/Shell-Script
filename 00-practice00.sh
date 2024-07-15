@@ -11,10 +11,10 @@ fi
 function(){
   if [ $? -ne 0]
   then
-    echo "$2....Failure"
-    exit 1
+      echo "$2....Failure"
+      exit 1
   else
-    echo "$2....Completed"
+      echo "$2....Completed"
   fi
 }
 dnf install mysql -y
