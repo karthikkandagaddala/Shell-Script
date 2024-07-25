@@ -3,7 +3,7 @@ userid=$(id -u)
 Timestamp=$(date +%F-%H-%M-%S)
 script_name=$(echo $0 | cut -d "." -f1)
 logfile=/temp/$script_name-$Timestamp.log
-if [ userid -ne 0 ]
+if [ $userid -ne 0 ]
 then
      echo "Please run this script with root access"
      exit 1
