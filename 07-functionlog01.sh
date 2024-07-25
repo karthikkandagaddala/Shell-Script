@@ -19,7 +19,7 @@ validate(){
          echo "$2....is Success"
     fi
 }
-dnf install mysql -y &>>logfile
+dnf install mysql -y &>>$logfile
 validate $? "installing MYSQL"
-dnf install docker -y &>>logfile
+dnf install docker -y &>>$logfile
 validate $? "installing Docker"
