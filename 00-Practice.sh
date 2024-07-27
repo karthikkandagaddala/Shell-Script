@@ -6,7 +6,7 @@ logfile=/tmp/$script_name-$timestamp.log
 if [ $userid -ne 0 ]
 then
      echo "Please run this script as a sudo access"
-     exit1
+     exit 1
 else
     echo "your a super user"
 fi
@@ -14,7 +14,7 @@ boom(){
     if [ $1 -ne 0 ]
     then
          echo "$2....is Failure."
-         exit1
+         exit 1
     else
          echo "$2....is Success"
     fi
@@ -23,5 +23,3 @@ dnf install mysql -y &>>$logfile
 boom $? "Installing my sql"
 dnf install docker -y &>>$logfile
 boom $? "installing docker"
-dnf install git -y &>>$logfile
-boom $? "installing git"
