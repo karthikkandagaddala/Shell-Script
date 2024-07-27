@@ -24,4 +24,4 @@ boom $? "Installing my sql" &>>$logfile
 dnf install docker -y
 boom $? "installing docker" &>>$logfile
 dnf install git -y
-boom $? "inmstalling git" &>>$logfile
+boom $? "installing git" &>>$logfile
