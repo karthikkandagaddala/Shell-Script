@@ -1,23 +1,27 @@
 #!/bin/bash
 userid=$(id -u)
-timestamp=$(date +%F-%H-%M-%s)
-if [ $userid -ne 0 ]
+timestamp=$(date +%F-%H-%M-%S)
+script_name=$(echo $0 | cut -d "." -f1)
+logfile=/tmp/$script_name-$timestamp.log
+if [ $userid -ne 0 ] &>>$logfile
 then
-    echo "Please proced with sudo access"
-    exit 1
+     echo "Please run this script as a sudo access"
+     exit1
 else
     echo "your a super user"
 fi
-valid(){
+boom(){
     if [ $1 -ne 0 ]
     then
-        echo "$2....FAILURE"
-        exit 1
+         echo "$2....is Failure."
+         exit1
     else
-        echo "$2....SUCCESS"
-    fi    
+         echo "$2....is Success"
+    fi
 }
 dnf install mysql -y
-valid $? "Installing Mysql"
+boom $? "Installing my sql"
+dnf install docker -y
+boom $? "installing docker"
 dnf install git -y
-valid $? "Installing git"
+boom $? "inmstalling git"
