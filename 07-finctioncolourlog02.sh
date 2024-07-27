@@ -1,6 +1,6 @@
 #!/bin/bash
 userid=$(id -u)
-timestamp=&$(date +%F-%H-%M-%S)
+timestamp=$(date +%F-%H-%M-%S)
 scriptname=$(echo $0 cut | -d "." -f1)
 logfile=/tmp/$scriptname-$timestamp.log
 if [ $userid -ne 0 ] &>>$logfile
