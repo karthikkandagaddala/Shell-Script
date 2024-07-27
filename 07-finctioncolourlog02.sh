@@ -22,4 +22,4 @@ colour(){
 dnf install docker -y &>>$logfile
 colour $? "Installing Docker"
 dnf install mysql -y &>>$logfile
-colour $? "Installing mysql 
+colour $? "Installing mysql" 
