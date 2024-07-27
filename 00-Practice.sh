@@ -11,7 +11,7 @@ else
     echo "your a super user"
 fi
 boom(){
-    if [ $1 -ne 0 ]
+    if [ $1 -ne 0 ] &>>$logfile
     then
          echo "$2....is Failure."
          exit1
@@ -20,8 +20,8 @@ boom(){
     fi
 }
 dnf install mysql -y
-boom $? "Installing my sql"
+boom $? "Installing my sql" &>>$logfile
 dnf install docker -y
-boom $? "installing docker"
+boom $? "installing docker" &>>$logfile
 dnf install git -y
-boom $? "inmstalling git"
+boom $? "inmstalling git" &>>$logfile
