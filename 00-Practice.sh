@@ -1,5 +1,5 @@
-#! /bin/bash
-person1=karthik
-person2=kavya
-echo "$person1::Hello $person2, how are you?"
-echo "$person2::Hi $person1, i am fine how are?"
+#! /bash/bin/
+person1=karthik     
+person2=teja
+echo "$person1::Hi $person2 how are?"
+echo "$person2::$person1 I am good, how about you?"
