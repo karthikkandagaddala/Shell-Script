@@ -14,6 +14,7 @@ then
       exit 1
 else
       echo "MY Sql installation is success"
+fi
 dnf install ansible -y
 if [ $? -ne 0 ]
 then 
@@ -21,5 +22,6 @@ then
       exit 1
 else
       echo "Ansible install success"
+fi
 dnf remove mysql -y
 dnf remove ansible -y
