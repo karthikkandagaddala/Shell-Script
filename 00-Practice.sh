@@ -20,3 +20,7 @@ dnf install mysql -y
 validate $? "installing my sql"
 dnf install ansible -y
 validate $? "insatlling ansible"
+dnf remove mysql -y 
+validate $? "Removing mysql"
+dnf remove ansible -y
+validate $? "Removing ansible"
