@@ -2,26 +2,21 @@
 userid=$(id -u)
 if [ $userid -ne 0 ]
 then
-      echo "Please start with SUDO USER"
+      echo "please take Sudo Access"
       exit 1
-else
-      echo "Your a ***SUDO USER***"
+else 
+      echo "you are a super user"
 fi
+validate () {
+     if [ $1 -ne 0 ]
+     then
+           echo "$2....is failure"
+           exit 1
+     else 
+           echo "$2.....is Success"
+     fi
+}
 dnf install mysql -y
-if [ $? -ne 0 ]
-then
-      echo "My sql install is failure"
-      exit 1
-else
-      echo "MY Sql installation is success"
-fi
+validate $? "installing my sql"
 dnf install ansible -y
-if [ $? -ne 0 ]
-then 
-      echo "Ansible install failure"
-      exit 1
-else
-      echo "Ansible install success"
-fi
-dnf remove mysql -y
-dnf remove ansible -y
+validate $? "insatlling ansible"
